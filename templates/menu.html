@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - A One</title>
+</head>
+<body>
+    {% extends 'index.html' %}
+
+    {% block content %}
+        <div class="menu-page">
+            <h2>Our <span style="color: #5B7921">Delicious </span> Menu</h2>
+            <div class="grid-menu">
+                <div class="menu-card menu-card1">
+                    <img src="../static/images/decor-leaf.png" alt="">
+                    <div class="menu-item">
+                        <div class="item-name">Burger</div>
+                        <div class="item-price">₹ 40</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cheese Burger</div>
+                        <div class="item-price">₹ 50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Chicken Burger</div>
+                        <div class="item-price">₹ 60</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Veg Burger</div>
+                        <div class="item-price">₹ 30</div>
+                    </div>
+                </div>
+                <div class="menu-card menu-card2">
+                    <img src="../static/images/decor-leaf.png" alt="">
+                    <div class="menu-item">
+                        <div class="item-name">Margherita Pizza</div>
+                        <div class="item-price">₹ 120</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Pepperoni Pizza</div>
+                        <div class="item-price">₹ 100</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">BBQ Chicken Pizza</div>
+                        <div class="item-price">₹ 150</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Veg Supreme Pizza</div>
+                        <div class="item-price">₹ 90</div>
+                    </div>
+                </div>
+                <div class="menu-card menu-card3">
+                    <img src="../static/images/decor-leaf.png" alt="">
+                    <div class="menu-item">
+                        <div class="item-name">Soft Drink</div>
+                        <div class="item-price">₹ 30</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Shake</div>
+                        <div class="item-price">₹ 40</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cold Coffee</div>
+                        <div class="item-price">₹ 50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Pepsi</div>
+                        <div class="item-price">₹ 40</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+env/
+venv/
+.env
+.pdf
+.png
+.jpeg
+.mp4
+.mov
+.venv/
+.venv

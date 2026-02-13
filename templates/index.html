@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}"><img src="" alt="">A One</a>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <div class="logo mobile-logo">
+                    <a href="{{ url_for('home') }}"><img src="" alt="">A One</a>
+                </div>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <div class="mobile-button"><a href="tel:+918512853208"><i class="fa-solid fa-phone"></i> Contact</a></div>
+            </ul>
+        </nav>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="contact-btn">
+            <a href="tel:+918512853208"><i class="fa-solid fa-phone"></i> Contact</a>
+        </div>
+         
+    </header>
+
+    {% block content %}
+    <main>
+        <div class="hero-section">
+            <div class="content-box">
+                <h1>Authentic <br><span style="color: #5B7921;">Italian Cusine</span></h1>
+                <p>Server Flavour of Italy</p>
+                <a href="{{ url_for('menu') }}">View Menu</a>
+            </div>
+            <div class="image-box">
+                <img src="../static/images/hero-image.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <div class="tasty-dishes">
+        <h2>Our <span style="color: #5B7921;">Popular</span> Dishes</h2>
+        <p>Loved by our regular customers and prepared fresh every day.</p>
+        <div class="dish-grid">
+            <div class="card-dish">
+                <img src="../static/images/plate-removebg-preview.png" alt="">
+                <div class="dish-description">
+                    <h2>Grilled Delight</h2>
+                    <p>Simple, healty, and full of flavour</p>
+                </div>  
+            </div>
+
+            <div class="card-dish">
+                <img src="../static/images/plate3-removebg-preview.png" alt="">
+                <div class="dish-description">
+                    <h2>Margherita Pizza</h2>
+                    <p>Authentic pizzas cooked to perfection</p>
+                </div>
+            </div>
+
+            <div class="card-dish">
+                <img src="../static/images/plate2-removebg-preview.png" alt="">
+                <div class="dish-description">
+                    <h2>Italian Classic</h2>
+                    <p>Beloyed dishes from Italy, prepared with care</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="why-choose">
+        <div class="review-txt">
+            <h2>Why<span style="color: #5B7921;"> Customer Love</span> Us</h2>
+            <ul>
+                <li><i class="fa-solid fa-utensils"></i> <span>Freshly Cooked meals</span></li>
+                <li><i class="fa-solid fa-heart"></i> <span>Flavors you love</span></li>
+                <li><i class="fa-solid fa-sack-dollar"></i> <span>Affordable Pricing</span></li>
+                <li><i class="fa-solid fa-clock"></i> <span>Quick Service</span></li>
+                <li><i class="fa-brands fa-pagelines"></i> <span>Healthy Environment</span></li>
+                <li><i class="fa-solid fa-face-smile"></i> <span>Frindly Staff</span></li>
+            </ul>
+        </div>
+        <div class="review-image">
+            <img src="../static/images/love-by-customer.jpg" alt="Styled Image">
+        </div>
+    </div>
+
+    <div class="call-action">
+        <div class="hungry-img">
+            <img src="../static/images/hungry2.jpg" alt="">
+        </div>
+        <div class="hungry">
+            <h2>Hungry? <span style="color: #5B7921;">Visit us today</span> or place your order now!</h2>
+            <div class="action-buttons">
+                <a href="tel:+918512853208"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="/contact"><i class="fa-solid fa-location-dot"></i> Get Direction</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="reviews-section">
+        <h2>What Our Customers Say</h2>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Cards -->
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">The pasta was absolutely divine! Fresh ingredients and perfect seasoning. Will definitely come back.</p>
+                    <p class="review-name">- Maria Rossi</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Amazing atmosphere and delicious pizza. The Margherita is a must-try!</p>
+                    <p class="review-name">- John Doe</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Best Italian food in town. The tiramisu was heavenly.</p>
+                    <p class="review-name">- Sophia Loren</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Cozy place with authentic flavors. Highly recommended!</p>
+                    <p class="review-name">- Luca Bianchi</p>
+                </div>
+
+                <!-- Duplicate for smooth loop -->
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">The pasta was absolutely divine! Fresh ingredients and perfect seasoning. Will definitely come back.</p>
+                    <p class="review-name">- Maria Rossi</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Amazing atmosphere and delicious pizza. The Margherita is a must-try!</p>
+                    <p class="review-name">- John Doe</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Best Italian food in town. The tiramisu was heavenly.</p>
+                    <p class="review-name">- Sophia Loren</p>
+                </div>
+
+                <div class="review-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="review-text">Cozy place with authentic flavors. Highly recommended!</p>
+                    <p class="review-name">- Luca Bianchi</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+
+
+    <a 
+        href="https://wa.me/+918512853208" 
+        target="_blank" 
+        class="whatsapp-widget"
+        aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h3>Foodie Restaurant</h3>
+                <p>
+                    Serving fresh, delicious meals made with love.  
+                    Every dish is crafted to give you the perfect dining experience.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://yelp.com" target="_blank"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h4> Contact</h4>
+                <p><span style="font-weight: bold; ">Address:</span> Gali No 10, A-528, 20 Futa Road, Shriram Colony, Khazoori Khas, Delhi, 110090</p>
+                <p><span style="font-weight: bold;">Phone:</span> +91 85128 53208</p>
+                <p><span style="font-weight: bold;">Email:</span> hello@foodierestaurant.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Foodie Restaurant. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            const body = document.body;
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
